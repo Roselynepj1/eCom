@@ -66,7 +66,7 @@ const Contact = () => {
                     Fullname*
                   </label>
                   <input
-                    className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                    className='shadow appearance-none border border-black w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
                     id='fullname'
                     type='text'
                     min={3}
@@ -88,7 +88,7 @@ const Contact = () => {
                     Email*
                   </label>
                   <input
-                    className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                    className='shadow appearance-none border border-black w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
                     id='email'
                     type='text'
                     name='email'
@@ -111,7 +111,7 @@ const Contact = () => {
                   Subject*
                 </label>
                 <input
-                  className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                  className='shadow appearance-none border border-black w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
                   id='subject'
                   type='text'
                   min={3}
@@ -135,7 +135,7 @@ const Contact = () => {
                   How can we help?
                 </label>
                 <textarea
-                  className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                  className='shadow appearance-none border border-black w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
                   id='body'
                   name='body'
                   rows='4'
@@ -155,7 +155,7 @@ const Contact = () => {
               </button>
             </form>
             {showSuccess && (
-              <div className='mt-4 p-4 bg-green-100 text-green-700 rounded'>
+              <div className='mt-4 p-4 bg-green-100 text-green-700 border-black'>
                 Message sent successfully!
               </div>
             )}
