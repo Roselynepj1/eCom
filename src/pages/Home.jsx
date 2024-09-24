@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { getProducts } from '../api/products'
 import Layout from '../components/Layout'
 import Product from '../components/Product'
+import SearchIcon from '/src/assets/search.svg'
 
 const Home = () => {
   const [products, setProducts] = useState([]) // Ensure products is initialized as an array
@@ -46,7 +47,7 @@ const Home = () => {
 
   return (
     <Layout>
-      <div className='flex justify-center relative landing-page'>
+      <div className='flex justify-center relative landing-page '>
         <div className='container mx-auto px-4 sm:p-6 lg:p-8 flex flex-col justify-center'>
           <h1 className='text-3xl sm:text-4xl mb-10'>
             <span className='w-full sm:w-4/5 flex text-white text-bold leading-relaxed'>
@@ -57,7 +58,7 @@ const Home = () => {
           </h1>
           <a
             href='#products'
-            className='text-black border p-4 border-black hover:text-white hover:bg-black self-start'
+            className='text-black border  p-4 border-black hover:text-white hover:bg-black self-start'
           >
             Discover Products
           </a>
@@ -68,15 +69,24 @@ const Home = () => {
         className='container mx-auto py-16 px-4 sm:px-6 lg:px-8'
         id='products'
       >
-        <h1 className='text-center text-3xl sm:text-5xl mb-16'>Browse our catalog</h1>
+        <h1 className='text-center text-3xl sm:text-5xl mb-16 dark:text-white'>
+          Browse our catalog
+        </h1>
         {/* Search Input */}
-        <div className='my-8'>
+        <div className='my-8 relative'>
           <input
             type='text'
             placeholder='Search products by name'
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className='w-full p-2 border border-gray-300 rounded-md'
+            className='w-full p-2 pr-10 border border-gray-300 rounded-md dark:text-gray-300 dark:bg-transparent'
+          />
+          <img
+            src={SearchIcon}
+            alt='Search Icon'
+            width={20}
+            height={20}
+            className='absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none dark:invert'
           />
         </div>
 

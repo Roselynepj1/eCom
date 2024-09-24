@@ -44,15 +44,25 @@ const Product = () => {
   }
   return (
     <Layout>
-      <div className='container mx-auto px-4 sm:px-8 lg:px-8 grid grid-cols-1 sm:grid-cols-2 gap-8'>
-        <div className='h-80'>
+      <div className='container mx-auto px-4 sm:px-8 lg:px-8 grid grid-cols-1 sm:grid-cols-2 gap-8 '>
+        <div className='h-80 relative border border-slate-400'>
+          {product.price > product.discountedPrice && (
+            <small className='absolute right-0 top-2 bg-black text-white p-1'>
+              -
+              {Math.round(
+                ((product.price - product.discountedPrice) / product.price) *
+                  100
+              )}
+              %
+            </small>
+          )}
           <img
             src={product.image.url}
             alt={product.image.alt}
             className='h-full object-cover w-full'
           />
         </div>
-        <div className='flex flex-col gap-4'>
+        <div className='flex flex-col gap-4 dark:invert'>
           <h2 className='text-2xl'>{product.title}</h2>
           <p className='flex gap-2'>
             {product.price > product.discountedPrice && (

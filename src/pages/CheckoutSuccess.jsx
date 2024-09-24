@@ -4,7 +4,7 @@ import Layout from '../components/Layout'
 const CheckoutSuccess = () => {
   return (
     <Layout>
-      <div className='flex flex-col items-center justify-center h-screen text-center'>
+      <div className='flex flex-col items-center justify-center h-screen text-center dark:invert'>
         <div className='bg-white p-6 rounded-md flex flex-col gap-4'>
           <div className='rounded-full border-2 border-green-500 w-20 h-20 self-center'>
             <div className='text-green-500 mb-4'>

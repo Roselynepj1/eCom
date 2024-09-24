@@ -10,8 +10,8 @@ const ReviewItem = ({ review }) => {
           <div className='flex items-center mb-2'>
             <Star rating={review.rating} />
           </div>
-          <h3 className='text-lg font-semibold mb-2'>{review.description}</h3>
-          <p className='text-sm text-gray-600 mb-2'>{review.username}</p>
+          <h3 className='text-lg font-semibold mb-2 dark:text-white'>{review.description}</h3>
+          <p className='text-sm text-gray-600 mb-2 dark:text-white'>{review.username}</p>
         </div>
       </div>
     </div>

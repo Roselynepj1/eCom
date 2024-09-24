@@ -4,7 +4,7 @@ import logo from '/src/assets/logo.png'
 import bars from '/src/assets/bars.svg'
 import CartIcon from './CartIcon'
 import { Link } from 'react-router-dom'
-
+import ThemeButton from './ThemeButton'
 const Header = () => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false)
   return (
@@ -21,7 +21,7 @@ const Header = () => {
           >
             X
           </button>
-          <ul className='flex flex-col items-center gap-4 text-white'>
+          <ul className='flex flex-col items-center gap-4 text-white '>
             <li>
               <Link to='/home' className='hover:underline'>
                 Home
@@ -32,6 +32,9 @@ const Header = () => {
                 Contact
               </Link>
             </li>
+            <li>
+              <ThemeButton />
+            </li>
           </ul>
         </div>
       </div>
@@ -39,26 +42,46 @@ const Header = () => {
         <div className='mx-auto py-4'>
           <ul className='flex gap-4 items-center'>
             <li className='flex sm:hidden'>
-              <img src={bars} alt='Logo' height={26} width={26} onClick={() => setOpenMobileMenu(true)}/>
+              <img
+                src={bars}
+                alt='Logo'
+                height={26}
+                width={26}
+                className='dark:invert'
+                onClick={() => setOpenMobileMenu(true)}
+              />
             </li>
             <li className='flex flex-grow justify-center sm:justify-start'>
               <Link to='/home'>
-                <img src={logo} alt='Logo' height={200} width={200} />
+                <img
+                  src={logo}
+                  alt='Logo'
+                  height={200}
+                  width={200}
+                  className='dark:invert'
+                />
               </Link>
             </li>
             <li className='ml-auto hidden sm:flex '>
-              <Link to='/home' className='hover:underline text-lg'>
+              <Link to='/home' className='hover:underline text-lg dark:invert'>
                 Home
               </Link>
             </li>
 
             <li className='hidden sm:flex '>
-              <Link to='/contact' className='hover:underline text-lg'>
+              <Link
+                to='/contact'
+                className='hover:underline text-lg dark:invert'
+              >
                 Contact
               </Link>
             </li>
             <li>
               <CartIcon />
+            </li>
+
+            <li>
+              <ThemeButton />
             </li>
           </ul>
         </div>
