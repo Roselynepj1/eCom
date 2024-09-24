@@ -79,7 +79,7 @@ const Product = () => {
         </div>
       </div>
       <div className='container mx-auto px-4 sm:px-8 lg:px-8 grid grid-cols-1 gap-8 pt-12'>
-        <h1 className='text-3xl'>Reviews ({product.reviews.length})</h1>
+        <h1 className='text-3xl dark:text-white'>Reviews ({product.reviews.length})</h1>
         <hr className='border border-1 ' />
         {product.reviews.map((review) => (
           <ReviewItem key={review.id} review={review} />

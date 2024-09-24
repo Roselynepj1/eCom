@@ -9,7 +9,7 @@ const Star = ({ rating }) => {
   const hasHalfStar = validRating % 1 !== 0
 
   return (
-    <div className='flex items-center dark:invert'>
+    <div className='flex items-center '>
       {Array.from({ length: 5 }, (_, index) => {
         if (index < fullStars) {
           // Full star

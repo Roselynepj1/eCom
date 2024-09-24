@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 const Layout = ({ children }) => {
   return (
-    <div className='flex flex-col min-h-screen dark:bg-black transition-colors duration-200'>
+    <div className='flex flex-col min-h-screen dark:bg-slate-950 transition-colors duration-200'>
       <Header />
       <main className='flex-grow'>{children}</main>
       <Footer />
