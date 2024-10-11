@@ -66,9 +66,9 @@ const Product = () => {
           <h2 className='text-2xl'>{product.title}</h2>
           <p className='flex gap-2'>
             {product.price > product.discountedPrice && (
-              <del>{product.price}</del>
+              <del>NOK {product.price}</del>
             )}
-            <span>{product.discountedPrice}</span>
+            <span>NOK {product.discountedPrice}</span>
           </p>
           <p>{product.description}</p>
           <QuantitySelector product={product} />

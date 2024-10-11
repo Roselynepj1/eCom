@@ -79,7 +79,7 @@ const Checkout = () => {
                   </div>
                 </div>
                 <div className='w-full sm:w-1/5 flex flex-col justify-center items-center gap-4'>
-                  <span className='dark:text-white'>{item.price}</span>
+                  <span className='dark:text-white'>NOK {item.price}</span>
                   <div className='w-1/5 flex justify-center sm:hidden'>
                     <button
                       onClick={() => decreaseItemQuantity(item.id)}
@@ -100,7 +100,7 @@ const Checkout = () => {
                       +
                     </button>
                   </div>
-                  <span className='sm:hidden'>{getItemSubtotal(item)}</span>
+                  <span className='sm:hidden'>NOK {getItemSubtotal(item)}</span>
                 </div>
                 <div className='w-1/5 justify-center hidden sm:flex'>
                   <button
@@ -123,7 +123,7 @@ const Checkout = () => {
                   </button>
                 </div>
                 <div className='w-1/5 text-center  hidden sm:flex dark:text-white'>
-                  {getItemSubtotal(item)}
+                  NOK {getItemSubtotal(item)}
                 </div>
               </div>
             ))}

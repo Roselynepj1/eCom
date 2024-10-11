@@ -33,9 +33,9 @@ const Product = ({ product }) => {
           </Link>
           <span className='flex gap-2'>
             {product.price > product.discountedPrice && (
-              <del>{product.price}</del>
+              <del>NOK {product.price}</del>
             )}
-            <span className='text-bold'>{product.discountedPrice}</span>
+            <span className='text-bold'>NOK {product.discountedPrice}</span>
           </span>
           <Star rating={product.rating} />
         </div>
